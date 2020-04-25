@@ -1,0 +1,484 @@
+cohrint@orion:~/gzweb$ sudo ./deploy.sh -m
+Build a local model database.
+Download from gazebo_models repository.
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- gzweb version 1.1.0
+-- Build type not selected: Release selected by default
+-- checking for module 'gazebo>=1.9.0'
+--   found gazebo, version 4.0.0
+-- checking for module 'jansson'
+--   found jansson, version 2.2.1
+-- checking for module 'gts'
+--   found gts, version 0.7.6
+-- Boost version: 1.46.1
+-- Boost version: 1.46.1
+-- Found the following Boost libraries:
+--   system
+--   filesystem
+--   regex
+--   thread
+-- Found PROTOBUF: /usr/lib/libprotobuf.so 
+-- Looking for tinyxml.h - found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cohrint/gzweb/build
+Scanning dependencies of target gzcoarse
+[100%] Building CXX object tools/CMakeFiles/gzcoarse.dir/gzcoarse.cc.o
+/home/cohrint/gzweb/tools/gzcoarse.cc: In function ‘void ExportTextureSource(const gazebo::common::SubMesh*, const gazebo::common::SubMesh*, TiXmlElement*, const char*)’:
+/home/cohrint/gzweb/tools/gzcoarse.cc:144:25: error: invalid conversion from ‘long unsigned int*’ to ‘unsigned int*’ [-fpermissive]
+/home/cohrint/gzweb/tools/nanoflann.hpp:947:21: error:   initializing argument 3 of ‘void nanoflann::KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>::knnSearch(const ElementType*, size_t, IndexType*, nanoflann::KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>::DistanceType*, int) const [with Distance = nanoflann::L2_Simple_Adaptor<double, PointCloud<double> >, DatasetAdaptor = PointCloud<double>, int DIM = 3, IndexType = unsigned int, nanoflann::KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>::ElementType = double, size_t = unsigned int, nanoflann::KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>::DistanceType = double]’ [-fpermissive]
+make[2]: *** [tools/CMakeFiles/gzcoarse.dir/gzcoarse.cc.o] Error 1
+make[1]: *** [tools/CMakeFiles/gzcoarse.dir/all] Error 2
+make: *** [all] Error 2
+gyp info it worked if it ends with ok
+gyp info using node-gyp@0.9.6
+gyp info using node@0.6.12 | linux | ia32
+gyp info spawn python
+gyp info spawn args [ '/home/cohrint/gzweb/node_modules/node-gyp/gyp/gyp',
+gyp info spawn args   'binding.gyp',
+gyp info spawn args   '-f',
+gyp info spawn args   'make',
+gyp info spawn args   '-I',
+gyp info spawn args   '/home/cohrint/gzweb/gzbridge/build/config.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/home/cohrint/gzweb/node_modules/node-gyp/addon.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/home/cohrint/.node-gyp/0.6.12/common.gypi',
+gyp info spawn args   '-Dlibrary=shared_library',
+gyp info spawn args   '-Dvisibility=default',
+gyp info spawn args   '-Dnode_root_dir=/home/cohrint/.node-gyp/0.6.12',
+gyp info spawn args   '-Dmodule_root_dir=/home/cohrint/gzweb/gzbridge',
+gyp info spawn args   '--depth=.',
+gyp info spawn args   '--generator-output',
+gyp info spawn args   'build',
+gyp info spawn args   '-Goutput_dir=.' ]
+gyp info ok 
+gyp info it worked if it ends with ok
+gyp info using node-gyp@0.9.6
+gyp info using node@0.6.12 | linux | ia32
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Debug', '-C', 'build' ]
+make: Entering directory `/home/cohrint/gzweb/gzbridge/build'
+  CXX(target) Debug/obj.target/gzbridge/GZNode.o
+g++: fatal error: no input files
+compilation terminated.
+/bin/sh: 1: /usr/include: Permission denied
+make: *** [Debug/obj.target/gzbridge/GZNode.o] Error 126
+make: Leaving directory `/home/cohrint/gzweb/gzbridge/build'
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/home/cohrint/gzweb/node_modules/node-gyp/lib/build.js:267:23)
+gyp ERR! stack     at ChildProcess.emit (events.js:70:17)
+gyp ERR! stack     at maybeExit (child_process.js:360:16)
+gyp ERR! stack     at Process.onexit (child_process.js:396:5)
+gyp ERR! System Linux 3.2.0-60-generic-pae
+gyp ERR! command "node" "/home/cohrint/gzweb/node_modules/.bin/node-gyp" "build" "-d"
+gyp ERR! cwd /home/cohrint/gzweb/gzbridge
+gyp ERR! node -v v0.6.12
+gyp ERR! node-gyp -v v0.9.6
+gyp ERR! not ok 
+Downloading gazebo_models...destination directory: gazebo_models
+requesting all changes
+adding changesets
+adding manifests
+adding file changes
+adding file changes
+added 515 changesets with 2957 changes to 1769 files (+21 heads)
+updating to branch default
+1234 files updated, 0 files merged, 0 files removed, 0 files unresolved
+Download complete
+Installing gazebo_models...-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Install path: /home/cohrint/gzweb/http/client/models
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmp.BQMgOMHKVX/gazebo_models/build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/gripper_v0/finger_H_UV_100430.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/gripper_v0/finger_H_UV_100430.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/gripper_v0/float_H_UV_100430.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/gripper_v0/float_H_UV_100430.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/gripper_v0/float_H_UV_100430.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/elbow_flex.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/elbow_flex.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/elbow_flex.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/upper_arm.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/upper_arm.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/upper_arm_v0/upper_arm.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_tilt.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_tilt.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_tilt.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_pan.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_pan.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/head_v0/head_pan.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/torso_v0/torso_lift.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/torso_v0/torso_lift.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/torso_v0/torso_lift.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/tilting_laser_v0/tilting_hokuyo.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/tilting_laser_v0/tilting_hokuyo.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/pr2/meshes/tilting_laser_v0/tilting_hokuyo.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_white_jersey_barrier/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_white_jersey_barrier/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/stereo_camera/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/stereo_camera/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/stereo_camera/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_gripper/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_gripper/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_gripper/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_gripper/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve/meshes/hand_wheel_valve.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve/meshes/hand_wheel_valve.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve/meshes/hand_wheel_valve.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/ground_plane/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/ground_plane/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/ground_plane/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/ground_plane/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/cinder_block/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/cinder_block/meshes/cinder_block.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/cinder_block/meshes/cinder_block.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/cinder_block/meshes/cinder_block.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/cinder_block/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/robocup14_spl_field/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/robocup14_spl_field/meshes/circle.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/robocup14_spl_field/meshes/circle.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/robocup14_spl_field/meshes/circle.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/robocup14_spl_field/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_2/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_2/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_2/meshes/house_2.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/house_2/meshes/house_2.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/house_2/meshes/house_2.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_2/materials/scripts/house_2.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_2/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fast_food/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fast_food/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fast_food/meshes/fast_food.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/fast_food/meshes/fast_food.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/fast_food/meshes/fast_food.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fast_food/materials/scripts/fast_food.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fast_food/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_collision.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_collision.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_collision.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_visual.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_visual.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/meshes/willowgarage_visual.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/willowgarage/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_large/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_large/meshes/wheel_valve_large.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_large/meshes/wheel_valve_large.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_large/meshes/wheel_valve_large.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_large/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/beer/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/beer/materials/scripts/beer.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/beer/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/meshes/construction_cone.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/meshes/construction_cone.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/meshes/construction_cone.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_cone/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/meshes/construction_barrel.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/meshes/construction_barrel.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/meshes/construction_barrel.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/construction_barrel/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/saucepan/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/saucepan/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/saucepan/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/saucepan/meshes/saucepan.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/saucepan/meshes/saucepan.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/saucepan/meshes/saucepan.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/saucepan/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x4/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x4/meshes/2x4x48.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x4/meshes/2x4x48.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x4/meshes/2x4x48.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x4/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_valve_wall/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_valve_wall/meshes/five_dice_wall.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_valve_wall/meshes/five_dice_wall.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_valve_wall/meshes/five_dice_wall.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_valve_wall/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x6/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x6/meshes/2x6x48.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x6/meshes/2x6x48.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x6/meshes/2x6x48.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_2x6/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_angled_barrier_45/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_angled_barrier_45/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_orange_jersey_barrier/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_orange_jersey_barrier/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/office_building/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/office_building/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/office_building/meshes/office_building.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/office_building/meshes/office_building.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/office_building/meshes/office_building.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/office_building/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/meshes/hokuyo.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/meshes/hokuyo.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/meshes/hokuyo.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/hokuyo/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_1/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_1/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_1/meshes/house_1.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/house_1/meshes/house_1.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/house_1/meshes/house_1.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_1/materials/scripts/house_1.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/house_1/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/meshes/starting_pen.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/meshes/starting_pen.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/meshes/starting_pen.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/materials/scripts/starting_pen.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/starting_pen/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve_wall/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_hand_wheel_valve_wall/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/meshes/nist_simple_ramp_120.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/meshes/nist_simple_ramp_120.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/meshes/nist_simple_ramp_120.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_simple_ramp_120/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_truss/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_truss/meshes/truss.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_truss/meshes/truss.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_truss/meshes/truss.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_truss/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/meshes/simple_box.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/meshes/simple_box.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/meshes/simple_box.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/materials/scripts/brick_box.material']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/brick_box_3x1x3/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/meshes/nist_maze_wall_triple_holes_120.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/meshes/nist_maze_wall_triple_holes_120.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/meshes/nist_maze_wall_triple_holes_120.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_maze_wall_triple_holes_120/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/ball_valve.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/ball_valve.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/ball_valve.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/attachment.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/attachment.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/meshes/attachment.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_ball_valve/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2_gripper/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2_gripper/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2_gripper/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/pr2_gripper/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_block_wall/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_block_wall/meshes/block_wall.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_block_wall/meshes/block_wall.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_block_wall/meshes/block_wall.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_block_wall/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/husky/husky-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/husky/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/husky/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_arm/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_arm/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_arm/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/simple_arm/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/model-1_2.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/model-1_3.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/meshes/nist_stairs_120.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/meshes/nist_stairs_120.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/meshes/nist_stairs_120.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/nist_stairs_120/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/iss_half/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/iss_half/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_wall/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/drc_practice_wheel_valve_wall/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/robocup_3Dsim_goal/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/robocup_3Dsim_goal/model.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/model-1_4.sdf']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/connector.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/connector.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/connector.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/coupling_hexagon.dae']
+['sed', '-i', '-e', 's/\\(>\\)\\(.*\\/\\)\\(.*\\.png\\)/\\1\\.\\.\\/materials\\/textures\\/\\3/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/coupling_hexagon.dae']
+['sed', '-i', '-e', '/[a-zA-Z0-9_\\.\\/\\-]\\+materials\\/textures/!s/\\([a-zA-Z0-9_\\-]\\+\\)\\(\\.png\\W\\)/\\.\\.\\/materials\\/textures\\/\\1\\2/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/meshes/coupling_hexagon.dae']
+['sed', '-i', '-e', 's/\\(\\.tga\\|\\.tiff\\|\\.tif\\|\\.jpg\\|\\.jpeg\\|\\.gif\\)/\\.png/g', '/home/cohrint/gzweb/http/client/assets/fire_hose_long_curled/materials/scripts/fire_hose_long_curled.material']
+error [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "./webify_models_v2.py", line 44, in <module>
+    subprocess.check_call(cmd)
+  File "/usr/lib/python2.7/subprocess.py", line 506, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python2.7/subprocess.py", line 493, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 679, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1249, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+Done
